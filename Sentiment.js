@@ -18,7 +18,7 @@ var tip = d3.tip()
 
 var tip2 = d3.tip()
   .attr('class', 'd3-tip-top')
-  .offset([-90, 0])
+  .offset([-100, 0])
   .direction('n')
   .html(function(d) {    
     return createTooltipHTML2(d);
@@ -26,7 +26,7 @@ var tip2 = d3.tip()
 
 var tip3 = d3.tip()
   .attr('class', 'd3-tip-top')
-  .offset([-90, 0])
+  .offset([-100, 0])
   .direction('n')
   .html(function(d) {    
     return createTooltipHTML3(d);
@@ -134,7 +134,7 @@ d3.csv('./timeline.csv', function(err, data){
     tip2.show(d);
 
     if(d.Deathdate){      
-      tip3.offset([-90, delta]);
+      tip3.offset([-100, delta]);
       tip3.show(d);
     }    
     
