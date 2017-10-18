@@ -185,7 +185,7 @@ d3.csv('./timeline.csv', function(err, data){
   var zoom = d3.zoom()
     .on("zoom", zoomed);
 
-  //svg.call(zoom);
+  svg.call(zoom);
 
   function zoomed() {
     gX.transition().duration(50).call(xAxis.scale(d3.event.transform.rescaleX(xScale)));
